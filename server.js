@@ -6,22 +6,21 @@ const PORT = process.env.PORT || 3001;
 
 const app = express();
 
-// Middleware for parsing JSON and urlencoded form data
+// Middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use('/api', api);
-
 app.use(express.static('public'));
-
-// Wildcard route to direct users to home page
-app.get('*', (req, res) =>
-  res.sendFile(path.join(__dirname, 'public/index.html'))
-);
 
 
 // GET Route to notes page 
 app.get('/notes', (req, res) => 
     res.sendFile(path.join(__dirname, '/public/notes.html'))
+);
+
+// Wildcard route to direct users to home page
+app.get('*', (req, res) =>
+  res.sendFile(path.join(__dirname, 'public/index.html'))
 );
 
 app.listen(PORT, () =>
