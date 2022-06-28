@@ -12,6 +12,11 @@ app.use(express.urlencoded({ extended: true }));
 app.use('/api', api);
 app.use(express.static('public'));
 
+// GET route to root 
+app.get('/', (req, res) => 
+  res.sendFile(path.join(__dirname, '/public/index.html'))
+);
+
 
 // GET Route to notes page 
 app.get('/notes', (req, res) => 
@@ -26,3 +31,5 @@ app.get('*', (req, res) =>
 app.listen(PORT, () =>
   console.log(`App listening at http://localhost:${PORT} 🚀`)
 );
+
+

@@ -1,6 +1,17 @@
 [
     {
-        "title":"Test Title",
-        "text":"Test text"
+        "title": "Example Note 1",
+        "text": "First Entry",
+        "id": "ae05bae7-217e-456b-881f-d0e286d4be1e"
+    },
+    {
+        "title": "Example Note 2",
+        "text": "Entry 2",
+        "id": "d15caf31-b882-4dde-9184-cd7bc1dc39ea"
+    },
+    {
+        "title": "Example Note 3",
+        "text": "Entry 3",
+        "id": "121048f4-a6b6-4f14-98d7-3e49f51b1779"
     }
 ]
