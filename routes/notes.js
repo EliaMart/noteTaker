@@ -44,7 +44,7 @@ notes.post('/', (req, res) => {
 
 
 
-// DELETE Route for a specific tip
+// DELETE Route 
 notes.delete('/:id', (req, res) => {
 
     const noteId = req.params.id;
